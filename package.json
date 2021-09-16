@@ -1,0 +1,16 @@
+{
+  "name": "floom-technical-exercise",
+  "version": "1.0.0",
+  "description": "Floom Technical Exercise",
+  "main": "index.js",
+  "scripts": {
+    "api-today": "json-server --port 8003 flowerstoday.json",
+    "api-tomorrow": "json-server --port 8004 flowerstomorrow.json",
+    "apis": "concurrently --kill-others \"npm run api-today\" \"npm run api-tomorrow\""
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "json-server": "0.10.1"
+  },
+  "author": "Ashley Hendry-Nunn"
+}
